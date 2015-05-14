@@ -1,19 +1,13 @@
-%nav.top-bar.collapse.show-for-large-up(role="navigation")
+.show-for-small-down
+  %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 75px;"}
+%nav.top-bar.collapse.show-for-medium-up(role="navigation")
   %ul.title-area
     %li.name
-      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"width: 30%;"}
+      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 75px;"}
     %li.toggle-topbar.menu-icon
       %span Menu Stuff
   %section.top-bar-section
     %ul.right
-      %li.divider
-      %li.has-form
-        =link_to "#", class: 'button' do
-          + New Pet
-      %li.divider
-      %li.has-form
-        =link_to "#", class: 'button' do
-          + New Client
       %li.divider
       %li.has-dropdown.not-click
         = link_to "New Appointment", "#"
