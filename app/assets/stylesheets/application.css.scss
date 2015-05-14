@@ -27,13 +27,37 @@
 footer {
   background-color: #191b1f;
   display: block;
-  height: 200px;
+  height: 225px;
   position: relative;
 }
 
 .top-bar {
   height: 75px;
   background: white;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  padding: 0 0.9375rem;
+  line-height: 2.8125rem;
+  background: white;
+  color: black;
+  font-size: 16px;
+}
+
+.top-bar-section ul {
+  margin-top: 15px;
+}
+
+ul.dropdown {
+  margin-top: 0px;
+}
+
+.top-bar-section .has-dropdown > a:after {
+  border-color: rgba(0, 0, 0, 01) transparent transparent transparent;
+}
+
+.top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button):hover {
+  background: #00BFFF;
 }
 
 /*Color Stuff*/

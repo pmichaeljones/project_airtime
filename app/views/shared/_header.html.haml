@@ -1,11 +1,11 @@
-.show-for-small-down
-  %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 60px;"}
-%nav.top-bar.collapse.show-for-medium-up(role="navigation")
+%nav.top-bar.collapse(role="navigation")
   %ul.title-area
     %li.name
-      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 60px;"}
+      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 70px; margin-left: 30px;"}
     %li.toggle-topbar.menu-icon
-      %span Menu Stuff
+      %a
+        %span
+          Menu
   %section.top-bar-section
     %ul.right
       %li.has-dropdown.not-click
@@ -13,21 +13,15 @@
         %ul.dropdown
           %li= link_to "501(c)(3)", "#"
           %li= link_to "Chris Santacroce", "#"
-      %li.divider
       %li.has-dropdown.not-click
         = link_to "Fly with Us", "#"
         %ul.dropdown
           %li= link_to "FAQ", "#"
           %li= link_to "Come Fly With Us", "#"
           %li= link_to "Important Information", "#"
-      %li.divider
-      %li.divider
       %li.has-dropdown.not-click
         = link_to "Help the Cause", "#"
         %ul.dropdown
           %li= link_to "Sponsor Us", "#"
-          %li= link_to "Donate Money", "#"
+          %li= link_to "Make Donation", "#"
           %li= link_to "Volunteer Time", "#"
-    %ul.left
-      %p
-        Sponsors
