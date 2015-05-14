@@ -1,0 +1,25 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    - if @title
+      %title
+        = @title
+    - else
+      %title Project Airtime | Wheelchair Tandem Paragliding 501(c)(3)
+    %meta(charset="UTF-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    - if @metadescription
+      %meta{:name => 'description', :content => "#{@metadescription}"}
+    - else
+      %meta{:name => 'description', :content => "The Project Airtime target co-pilot includes special needs individuals, those with spinal cord and brain injuries, people battling illness, the elderly, people in recovery and veterans."}
+    = favicon_link_tag
+    = csrf_meta_tag
+    = javascript_include_tag "vendor/modernizr"
+    = stylesheet_link_tag "application"
+    %link(href='https://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css')
+  %body
+    %header
+      = render 'shared/header'
+      = yield
+    %footer
+      = render 'shared/footer'
