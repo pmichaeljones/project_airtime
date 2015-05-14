@@ -1,23 +1,26 @@
 .show-for-small-down
-  %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 75px;"}
+  %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 60px;"}
 %nav.top-bar.collapse.show-for-medium-up(role="navigation")
   %ul.title-area
     %li.name
-      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 75px;"}
+      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 60px;"}
     %li.toggle-topbar.menu-icon
       %span Menu Stuff
   %section.top-bar-section
     %ul.right
+      %li.has-dropdown.not-click
+        = link_to "About", "#"
+        %ul.dropdown
+          %li= link_to "501(c)(3)", "#"
+          %li= link_to "Chris Santacroce", "#"
       %li.divider
       %li.has-dropdown.not-click
-        = link_to "New Appointment", "#"
+        = link_to "Help Out", "#"
         %ul.dropdown
-          %li= link_to "Grooming", "#"
+          %li= link_to "Sponsor Us", "#"
+          %li= link_to "Donate Money", "#"
+          %li= link_to "Volunteer Time", "#"
       %li.divider
-      %li.has-dropdown.not-click
-        = link_to "Menu"
-        %ul.dropdown
-          %li= link_to "Business Dashboard", "#"
-          %li= link_to "Customer List", "#"
-          %li= link_to "Update Business Profile", "#"
-          %li= link_to "Logout", "#"
+    %ul.left
+      %p
+        stuff over here
