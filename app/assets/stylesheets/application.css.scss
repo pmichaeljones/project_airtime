@@ -20,9 +20,19 @@
 
 @import 'foundation-icons';
 
+.centered {
+  text-align: center;
+}
+
 footer {
   background-color: #191b1f;
   display: block;
   height: 320px;
   position: relative;
+}
+
+/*Color Stuff*/
+
+.white {
+  color: white;
 }
