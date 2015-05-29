@@ -70,10 +70,31 @@ ul.dropdown {
   color: white;
 }
 
+.tabs dd > a, .tabs .tab-title > a {
+  margin-left: 10px;
+  background: black;
+  color: white;
+}
+
 /*homepage contact form */
 .copilot-form fieldset {
   background: rgba(255,255,255,.75);
   padding-bottom: 0px;
   margin-top: 5%;
   padding-top: 5px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
