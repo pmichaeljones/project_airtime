@@ -1,19 +1,21 @@
 = form_tag '/corporate_contact', :class => "copilot-form", method: :post, data: {abide: ''} do
   .row
     %fieldset
-      %legend Come Fly With Us!
+      %legend Come Flying with Project Airtime!
       .small-12.column
-        %p{:style =>"margin-bottom: 5px;"} Submit the form to become a Project Airtime Co-Pilot.
         = label_tag :sender_name, "Your Name"
         = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
         %small.error Please Include Your Name
       .small-12.column
-        = label_tag :sender, "Your Email Address"
+        = label_tag :sender, "Phone Number"
+        = email_field_tag :sender, nil, placeholder: '555-666-7777', class: 'radius', required: ''
+      .small-12.column
+        = label_tag :sender, "Email Address"
         = email_field_tag :sender, nil, placeholder: 'YourEmail@example.com', class: 'radius', type:'email', required: ''
         %small.error Must Be Valid Email
       .small-12.column
         = label_tag :message, "Tell Us About Yourself"
-        = text_area_tag :message, nil, class: 'radius', rows: 5, required: ''
+        = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
         %small.error Please Include Message Content
       .small-12.large-12.column
         =submit_tag "Send Co-Pilot Form", class: 'button right radius'
