@@ -1,7 +1,9 @@
-%nav.top-bar(role="navigation")
+%nav.top-bar{role: 'navigation', data: {topbar:''}}
   %ul.title-area
     %li.name
-      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 70px; margin-left: 15px;"}
+      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 70px; margin-left: 5px;"}
+    /%li.toggle-topbar.menu-icon
+    /  %span Menu
   %section.top-bar-section
     %ul.right
       %li.has-dropdown.not-click

@@ -27,7 +27,6 @@
 footer {
   background-color: #191b1f;
   display: block;
-  height: 225px;
   position: relative;
 }
 
@@ -62,6 +61,14 @@ ul.dropdown {
 
 .top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button):hover {
   background: #00BFFF;
+}
+
+.top-bar .toggle-topbar.menu-icon {
+  margin: 0px;
+}
+
+li.toggle-topbar.menu-icon span {
+  margin-right: 10px;
 }
 
 .homepage-column {
