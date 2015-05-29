@@ -70,11 +70,23 @@ ul.dropdown {
   color: white;
 }
 
+/*homepage video tabs */
 .tabs dd > a, .tabs .tab-title > a {
   margin-left: 10px;
   background: black;
   color: white;
 }
+
+.tabs dd > a:hover, .tabs .tab-title > a:hover {
+  background-color: #008CBA;
+}
+
+.tabs dd.active a, .tabs .tab-title.active a {
+  background-color: grey;
+  color: black;
+}
+
+
 
 /*homepage contact form */
 .copilot-form fieldset {
