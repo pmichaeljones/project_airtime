@@ -4,14 +4,14 @@
       %legend Come Flying with Project Airtime!
       .small-12.column
         = label_tag :sender_name, "Your Name"
-        = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
+        = text_field_tag :sender_name, nil, placeholder: 'Johnny Appleseed', class: 'radius', required: ''
         %small.error Please Include Your Name
       .small-12.column
         = label_tag :sender, "Phone Number"
         = email_field_tag :sender, nil, placeholder: '555-666-7777', class: 'radius', required: ''
       .small-12.column
         = label_tag :sender, "Email Address"
-        = email_field_tag :sender, nil, placeholder: 'YourEmail@example.com', class: 'radius', type:'email', required: ''
+        = email_field_tag :sender, nil, placeholder: 'MrAppleseed@gmail.com', class: 'radius', type:'email', required: ''
         %small.error Must Be Valid Email
       .small-12.column
         = label_tag :message, "Tell Us About Yourself"
