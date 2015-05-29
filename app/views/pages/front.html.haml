@@ -20,18 +20,28 @@
         We're always looking for people or organizations that are willing to donate time to the cause. If you have a skill that you think would be of service to the team, please shoot us an email and we'll be in touch. We're currently looking for people with expertise in partnerships, promotions and fundraising, though all support is welcome.
 %section
   .row
-    .small-12.large-3.columns
-      .flex-video
-        %iframe{:src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
-    .small-12.large-3.columns
-      .flex-video
-        %iframe{:src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
-    .small-12.large-3.columns
-      .flex-video
-        %iframe{:src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
-    .small-12.large-3.columns
-      .flex-video
-        %iframe{:src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
+    %ul.tabs{:data => {:tab => ""}}
+      %li.tab-title.active
+        %a{:href => "#video1"} Video 1
+      %li.tab-title
+        %a{:href => "#video2"} Video 2
+      %li.tab-title
+        %a{:href => "#video3"} Video 3
+      %li.tab-title
+        %a{:href => "#video4"} Video 4
+    .tabs-contents
+      #video1.content.active
+        .flex-video
+          %iframe{:src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
+      #video2.content
+        .flex-video
+          %iframe{:src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
+      #video3.content
+        .flex-video
+          %iframe{:src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
+      #video4.content
+        .flex-video
+          %iframe{:src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
 %section
   .row
     %h2.centered Our Sponsors
