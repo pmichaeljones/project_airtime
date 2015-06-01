@@ -19,7 +19,13 @@
       %h4.centered
         How Can I Help Out?
       %p{:style=>"font-size: 14px"}
-        We're always looking for people or organizations that are willing to donate time to the cause. If you have a skill that you think would be of service to the team, please shoot us an email and we'll be in touch. We're currently looking for people with expertise in partnerships, promotions and fundraising, though all support is welcome.
+        We're always looking for people or organizations that are willing to
+        %span
+          =link_to "volunteer time/skill", volunteer_path
+        or
+        %span
+          =link_to "become a sponsor.", sponsorship_path
+        If you have a skill that you think would be of service to the team, please shoot us an email and we'll be in touch. We're currently looking for people with expertise in partnerships, promotions and fundraising, though all support is welcome.
 %section.show-for-large-up.skyblue
   .row
     %h2.centered

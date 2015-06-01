@@ -1,28 +1,33 @@
 .row
-  .small-12.column
-    %h3 Want to Volunteer Time to Project Airtime?
-= form_tag '/volunteer_inquiry', method: :post, data: {abide: ''} do
-  .row
+  .small-12.large-6.column
+    %h4 Want to Volunteer Time to Project Airtime?
     %hr
-    .small-12.column.centered
-      %h3 Send us a brief email below with how you'd like to volunteer time to Project Airtime.
-    %fieldset
-      %legend Project Airtime Volunteer Form
-      .small-12.large-6.column
-        = label_tag :sender_name, "Your Name"
-        = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
-        %small.error Please Include Your Name
-      .small-12.large-6.column
-        = label_tag :sender, "Your Email Address"
-        = email_field_tag :sender, nil, placeholder: 'YourEmail@example.com', class: 'radius', type:'email', required: ''
-        %small.error Must Be Valid Email
-      .small-12.large-12.column
-        = label_tag :subject, "Subject"
-        = text_field_tag :subject, nil, class: 'radius', required: ''
-        %small.error Please Include Subject
-      .small-12.large-12.column
-        = label_tag :message, "E-Mail"
-        = text_area_tag :message, nil, class: 'radius', rows: 5, required: ''
-        %small.error Please Include Message Content
-      .small-12.large-12.column
-        =submit_tag "Contact DoggieDashboard", class: 'button right radius'
+    %p Project Airtime is always looking for people and organizations that are willing to donate time to the cause.
+    %p We're a small team here at Project Airtime. Any and all help is greatly appreciated.
+    %p If you've got a skill we could use, send us a message. We're currently looking for people or organizations with expertise in:
+    %ul
+      %li Fundraising
+      %li Partnerships
+      %li Promotions
+  .small-12.large-6.column
+    = form_tag '/volunteer_form', method: :post, data: {abide: ''} do
+      %fieldset
+        %legend Project Airtime Volunteer Form
+        .small-12.large-6.column
+          = label_tag :sender_name, "Your Name"
+          = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
+          %small.error Please Include Your Name
+        .small-12.large-6.column
+          = label_tag :sender, "Your Email Address"
+          = email_field_tag :sender, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
+          %small.error Must Be Valid Email
+        .small-12.large-12.column
+          = label_tag :subject, "Subject"
+          = text_field_tag :subject, nil, class: 'radius', required: ''
+          %small.error Please Include Subject
+        .small-12.large-12.column
+          = label_tag :message, "E-Mail"
+          = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
+          %small.error Please Include Message Content
+        .small-12.large-12.column
+          =submit_tag "Send Volunteer Form", class: 'button right radius'
