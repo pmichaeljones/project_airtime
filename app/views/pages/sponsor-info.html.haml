@@ -4,7 +4,7 @@
 .row
   .small-12.large-6.column
     %br
-    %p Becoming a Project Airtime sponors has some great benefits:
+    %p Becoming a Project Airtime sponsor has some great benefits:
     %ul
       %li Benefit #1
       %li Benefit #2
@@ -30,13 +30,13 @@
   .small-12.large-6.column
     = form_tag '/volunteer_form', method: :post, data: {abide: ''} do
       %fieldset
-        %legend Project Airtime Volunteer Form
+        %legend Project Airtime Sponsorship Form
         .small-12.large-6.column
           = label_tag :sender_name, "Your Name"
           = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
           %small.error Please Include Your Name
         .small-12.large-6.column
-          = label_tag :sender, "Your Email Address"
+          = label_tag :sender, "Your Email"
           = email_field_tag :sender, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
           %small.error Must Be Valid Email
         .small-12.large-12.column
@@ -44,9 +44,9 @@
           = text_field_tag :subject, nil, class: 'radius', required: ''
           %small.error Please Include Subject
         .small-12.large-12.column
-          = label_tag :message, "E-Mail"
+          = label_tag :message, "Message"
           = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
-          = hidden_field_tag :hidden_field, "volunteer_form"
+          = hidden_field_tag :hidden_field, "sponsor-form-kdj23408f2n9f8j298fn982398f3"
           %small.error Please Include Message Content
         .small-12.large-12.column
           =submit_tag "Send Sponsorship Form", class: 'button right radius'

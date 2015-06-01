@@ -18,7 +18,7 @@
           = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
           %small.error Please Include Your Name
         .small-12.large-6.column
-          = label_tag :sender, "Your Email Address"
+          = label_tag :sender, "Your Email"
           = email_field_tag :sender, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
           %small.error Must Be Valid Email
         .small-12.large-12.column
@@ -26,9 +26,9 @@
           = text_field_tag :subject, nil, class: 'radius', required: ''
           %small.error Please Include Subject
         .small-12.large-12.column
-          = label_tag :message, "E-Mail"
+          = label_tag :message, "Message"
           = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
-          = hidden_field_tag :hidden_field, "volunteer_form"
+          = hidden_field_tag :hidden_field, "volunteer-form-23498hflkj9f8f2n3info8j3"
           %small.error Please Include Message Content
         .small-12.large-12.column
           =submit_tag "Send Volunteer Form", class: 'button right radius'
