@@ -1,5 +1,6 @@
 = form_tag '/copilot_form', :class => "copilot-form", method: :post, data: {abide: ''} do
   .row
+    = render 'shared/messages'
     %fieldset
       %legend Come Fly with Project Airtime!
       .small-12.column

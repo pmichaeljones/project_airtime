@@ -2,6 +2,9 @@
   .small-12.column
     %h4 Would You or Your Company Like to Become a Project Airtime Sponsor?
 .row
+  .small-8.small-centered.columns
+    = render 'shared/messages'
+.row
   .small-12.large-6.column
     %br
     %p Becoming a Project Airtime sponsor has some great benefits:
@@ -28,7 +31,7 @@
         %li Taka Investments
         %li Mark Burnett
   .small-12.large-6.column
-    = form_tag '/volunteer_form', method: :post, data: {abide: ''} do
+    = form_tag '/sponsorship_form', method: :post, data: {abide: ''} do
       %fieldset
         %legend Project Airtime Sponsorship Form
         .small-12.large-6.column
@@ -36,8 +39,8 @@
           = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
           %small.error Please Include Your Name
         .small-12.large-6.column
-          = label_tag :sender, "Your Email"
-          = email_field_tag :sender, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
+          = label_tag :sender_email, "Your Email"
+          = email_field_tag :sender_email, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
           %small.error Must Be Valid Email
         .small-12.large-12.column
           = label_tag :subject, "Subject"
