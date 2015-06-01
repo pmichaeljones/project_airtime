@@ -7,7 +7,7 @@ class AppMailer < ActionMailer::Base
     @message = params[:message]
     mail(
       from: "#{@name} <#{@email}>",
-      to: "pmichaeljones@gmail.com",
+      to: "projectairtime@gmail.com",
       subject: "Co-Pilot Inquiry"
       )
   end
@@ -19,7 +19,7 @@ class AppMailer < ActionMailer::Base
     @message = params[:message]
     mail(
       from: "#{@sender} <#{@email}>",
-      to: "pmichaeljones@gmail.com",
+      to: "projectairtime@gmail.com",
       subject: "#{@subject}"
       )
   end
@@ -31,7 +31,7 @@ class AppMailer < ActionMailer::Base
     @message = params[:message]
     mail(
       from: "#{@sender} <#{@email}>",
-      to: "pmichaeljones@gmail.com",
+      to: "projectairtime@gmail.com",
       subject: "#{@subject}"
       )
   end
@@ -41,7 +41,7 @@ class AppMailer < ActionMailer::Base
     @email = params[:sender_email]
     mail(
       to: "#{@email}",
-      from: "pmichaeljones@gmail.com",
+      from: "Project Airtime <projectairtime@gmail.com>",
       subject: "Project Airtime Confirmation"
       )
   end
