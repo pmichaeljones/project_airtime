@@ -1,3 +1,52 @@
 .row
   .small-12.column
-    %h3 Looking to Become a Project Airtime Sponsor?
+    %h4 Would You or Your Company Like to Become a Project Airtime Sponsor?
+.row
+  .small-12.large-6.column
+    %br
+    %p Becoming a Project Airtime sponors has some great benefits:
+    %ul
+      %li Benefit #1
+      %li Benefit #2
+      %li Benefit #3
+      %li Benefit #4
+    %p Join our growing list of Project Airtime sponsors!
+    .large-6.column
+      %ul{:style => "font-size: 11px;"}
+        %li Gubelman Foundation
+        %li Jeff Howard
+        %li Lori Fitzgerald
+        %li Shad Coulson
+        %li Curtis Williams
+        %li Community Foundation of Utah
+    .large-6.column
+      %ul{:style => "font-size: 11px;"}
+        %li Fabric of America Fund
+        %li Jonathan Foster
+        %li Tom Hapmpton
+        %li Steve Thorne
+        %li Taka Investments
+        %li Mark Burnett
+  .small-12.large-6.column
+    = form_tag '/volunteer_form', method: :post, data: {abide: ''} do
+      %fieldset
+        %legend Project Airtime Volunteer Form
+        .small-12.large-6.column
+          = label_tag :sender_name, "Your Name"
+          = text_field_tag :sender_name, nil, placeholder: 'Your Name', class: 'radius', required: ''
+          %small.error Please Include Your Name
+        .small-12.large-6.column
+          = label_tag :sender, "Your Email Address"
+          = email_field_tag :sender, nil, placeholder: 'name@example.com', class: 'radius', type:'email', required: ''
+          %small.error Must Be Valid Email
+        .small-12.large-12.column
+          = label_tag :subject, "Subject"
+          = text_field_tag :subject, nil, class: 'radius', required: ''
+          %small.error Please Include Subject
+        .small-12.large-12.column
+          = label_tag :message, "E-Mail"
+          = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
+          = hidden_field_tag :hidden_field, "volunteer_form"
+          %small.error Please Include Message Content
+        .small-12.large-12.column
+          =submit_tag "Send Sponsorship Form", class: 'button right radius'

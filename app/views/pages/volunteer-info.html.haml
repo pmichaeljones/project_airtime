@@ -28,6 +28,7 @@
         .small-12.large-12.column
           = label_tag :message, "E-Mail"
           = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
+          = hidden_field_tag :hidden_field, "volunteer_form"
           %small.error Please Include Message Content
         .small-12.large-12.column
           =submit_tag "Send Volunteer Form", class: 'button right radius'
