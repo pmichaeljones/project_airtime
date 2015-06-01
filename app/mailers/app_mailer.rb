@@ -1,9 +1,9 @@
 class AppMailer < ActionMailer::Base
 
   def copilot(params)
-    @name = params[:name]
+    @name = params[:sender_name]
     @phone = params[:phone]
-    @email = params[:email]
+    @email = params[:sender_email]
     @message = params[:message]
     mail(
       from: "#{@name} <#{@email}>",
@@ -33,6 +33,16 @@ class AppMailer < ActionMailer::Base
       from: "#{@sender} <#{@email}>",
       to: "projectairtime@gmail.com",
       subject: "#{@subject}"
+      )
+  end
+
+  def confirmation(params)
+    @name = params[:sender_name]
+    @email = params[:sender_email]
+    mail(
+      to: "#{@email}",
+      from: "projectairtime@gmail.com",
+      subject: "Project Airtime Confirmation"
       )
   end
 
