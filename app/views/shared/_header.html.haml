@@ -1,7 +1,8 @@
 %nav.top-bar{role: 'navigation', data: {topbar:''}}
   %ul.title-area
     %li.name
-      %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 70px; margin-left: 5px;"}
+      = link_to root_path do
+        %img{:src=>"https://drive.google.com/uc?id=0B3QIC8WbZNtONDVTUXBQYUxSbnc", :style=>"height: 70px; margin-left: 5px;"}
     /%li.toggle-topbar.menu-icon
     /  %span Menu
   %section.top-bar-section
@@ -9,7 +10,7 @@
       %li.has-dropdown.not-click
         = link_to "Get Started", "#"
         %ul.dropdown
-          %li= link_to "About Chris", "#"
+          %li= link_to "About Chris", about_chris_path
           %li= link_to "FAQ", "#"
           %li= link_to "Come Fly With Us", "#"
           %li= link_to "Important Information", "#"
