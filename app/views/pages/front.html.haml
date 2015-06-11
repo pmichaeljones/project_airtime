@@ -26,10 +26,27 @@
         %span
           =link_to "become a sponsor.", sponsorship_path
         If you have a skill that you think would be of service to the team, please shoot us an email and we'll be in touch. We're currently looking for people with expertise in partnerships, promotions and fundraising, though all support is welcome.
+%hr
+%section
+  .row
+    .small-12.column
+      %h2.centered
+        Project Airtime In the News
+        %hr
+  .row.centered{:style => "margin-bottom: 25px;"}
+    .small-12.large-4.columns
+      =link_to "http://kutv.com/features/pay-it-forward/flying-high-with-project-airtime", target: "_blank" do
+        %img{:src => "http://kutv.com/resources/media/kutv-header-logo.png" }
+    .small-12.large-4.columns
+      =link_to "http://www.twincities.com/movies/ci_28290315/film-inspired-quadriplegic-he-hopes-his-own-story", target: "_blank" do
+        %img{:src => "http://local.twincities.com/assets/logo-extra-large.png" }
+    .small-12.large-4.columns
+      =link_to "http://www.issaquahpress.com/2014/08/19/sky-riders-tandem-flights-help-everyone-take-wing/", target: "_blank" do
+        %img{:src => "http://www.issaquahpress.com/wp-content/themes/revolution_news-21/images/header.gif" }
 %section.show-for-large-up.skyblue
   .row
     %h2.centered
-      Project Airtime Flight Videos
+      Flight Videos
     %dl.tabs{:style => "margin-left: 14%;", :data => {:tab => ""}}
       %dd.active
         =link_to "Anton's Flight", "#video1"
