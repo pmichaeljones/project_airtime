@@ -10,12 +10,15 @@
     %p
       =link_to make_donation_path, style: "color: white;", target: "_blank" do
         Make a PayPal Donation
-    %p
-      =link_to "https://www.youtube.com/watch?v=kGl9yLFemo4", style: "color: white;", target: "_blank" do
-        Watch a Flight on YouTube
-    %p
-      =link_to "#{}", style: "color: white;", target: "_blank" do
-        Sign Up for Your Flight
+      %br
+      =link_to sponsorship_path, style: "color: white;", target: "_blank" do
+        Become a Sponsor
+      %br
+      =link_to volunteer_path, style: "color: white;", target: "_blank" do
+        Volunteer Time
+      %br
+      =link_to about_chris_path, style: "color: white;", target: "_blank" do
+        About Chris
   .small-12.large-4.columns
     %h3.centered.white
       Contact Information
@@ -35,8 +38,6 @@
       %i.fi-social-twitter{:style=>"font-size: 64px; padding: 0px 5px"}
     =link_to "http://instagram.com/projectairtime", style: "color: white;", target: "_blank" do
       %i.fi-social-instagram{:style=>"font-size: 64px; padding: 0px 5px"}
-    =link_to "#", style: "color: white;", target: "_blank" do
-      %i.fi-mail{:style=>"font-size: 64px; padding: 0px 5px"}
     = javascript_include_tag "application"
 
 
