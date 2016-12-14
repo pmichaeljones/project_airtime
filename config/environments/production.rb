@@ -15,12 +15,12 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   ActionMailer::Base.smtp_settings = {
-  :user_name      => ENV['GMAIL_SMTP_USER'],
-  :password       => ENV['GMAIL_SMTP_PASSWORD'],
-  :domain => "gmail.com",
+  :user_name => ENV['GMAIL_SMTP_USER'],
+  :password => ENV['GMAIL_SMTP_PASSWORD'],
+  :domain => "projectairtime.org",
   :address => "smtp.gmail.com",
   :port => 587,
-  :authentication => :login,
+  :authentication => :plain,
   :enable_starttls_auto => true
   }
 
