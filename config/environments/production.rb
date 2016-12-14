@@ -15,12 +15,11 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   ActionMailer::Base.smtp_settings = {
-  :port           => 587,
-  :address        => "smtp.gmail.com",
-  :domain         => "gmail.com",
   :user_name      => ENV['GMAIL_SMTP_USER'],
   :password       => ENV['GMAIL_SMTP_PASSWORD'],
-  :authentication => :login,
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :authentication => :plain,
   :enable_starttls_auto => true
   }
 
