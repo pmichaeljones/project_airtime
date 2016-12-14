@@ -17,9 +17,10 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
   :user_name      => ENV['GMAIL_SMTP_USER'],
   :password       => ENV['GMAIL_SMTP_PASSWORD'],
+  :domain => "gmail.com",
   :address => "smtp.gmail.com",
   :port => 587,
-  :authentication => :plain,
+  :authentication => :login,
   :enable_starttls_auto => true
   }
 
