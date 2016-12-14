@@ -37,54 +37,87 @@
       %h2.centered
         Project Airtime In the News
       %hr
-  .row.centered{:style => "margin-bottom: 25px;"}
-    .small-12.medium-4.large-2.columns
+  .row.centered.show-for-large-up{:style => "margin-bottom: 10px;"}
+    .large-2.columns
       =link_to "http://kutv.com/features/pay-it-forward/flying-high-with-project-airtime", target: "_blank" do
         %img{:src => "http://kutv.com/resources/media/kutv-header-logo.png" }
-      %hr.show-for-small-only
-    .small-12.medium-4.large-2.columns
+    .large-2.columns
       =link_to "Article_June_2015_EPMagazine.pdf", target: "_blank" do
         %img{:src => "http://www.geneticalliance.org/sites/default/files/logo_0.png" }
-      %hr.show-for-small-only
-    .small-12.medium-4.large-2.columns
+    .large-2.columns
       =link_to "http://www.twincities.com/movies/ci_28290315/film-inspired-quadriplegic-he-hopes-his-own-story", target: "_blank" do
         %img{:src => "http://local.twincities.com/assets/logo-extra-large.png" }
-      %hr.show-for-small-only
-    .small-12.medium-6.large-3.columns
+    .large-3.columns
       =link_to "http://www.issaquahpress.com/2014/08/19/sky-riders-tandem-flights-help-everyone-take-wing/", target: "_blank" do
-        %img{:src => "http://www.issaquahpress.com/wp-content/themes/revolution_news-21/images/header.gif" }
-      %hr.show-for-small-only
-    .small-12.medium-6.large-3.columns
-      =link_to "http://www.issaquahreporter.com/news/268961821.html ", target: "_blank" do
+        %img{:src => "http://bloximages.newyork1.vip.townnews.com/theeastside.news/content/tncms/custom/image/d5b82066-1d54-11e6-96d7-17f17fada470.png?_dc=1463616088" }
+    .large-3.columns
+      =link_to "http://www.issaquahreporter.com/news/268961821.html", target: "_blank" do
         %img{:src => "http://media.bclocalnews.com/images/IssySam.png"}
-      %hr.show-for-small-only
+  .row.centered.show-for-medium-down{:style => "margin-bottom: 10px;"}
+    .small-6.small-centered.columns
+      =link_to "http://kutv.com/features/pay-it-forward/flying-high-with-project-airtime", target: "_blank" do
+        %img{:src => "http://kutv.com/resources/media/kutv-header-logo.png" }
+      %hr
+    .small-6.small-centered.columns
+      =link_to "Article_June_2015_EPMagazine.pdf", target: "_blank" do
+        %img{:src => "http://www.geneticalliance.org/sites/default/files/logo_0.png" }
+      %hr
+    .small-6.small-centered.columns
+      =link_to "http://www.twincities.com/movies/ci_28290315/film-inspired-quadriplegic-he-hopes-his-own-story", target: "_blank" do
+        %img{:src => "http://local.twincities.com/assets/logo-extra-large.png" }
+      %hr
+    .small-6.small-centered.columns
+      =link_to "http://www.issaquahpress.com/2014/08/19/sky-riders-tandem-flights-help-everyone-take-wing/", target: "_blank" do
+        %img{:src => "http://bloximages.newyork1.vip.townnews.com/theeastside.news/content/tncms/custom/image/d5b82066-1d54-11e6-96d7-17f17fada470.png?_dc=1463616088" }
+      %hr
+    .small-6.small-centered.columns
+      =link_to "http://www.issaquahreporter.com/news/268961821.html", target: "_blank" do
+        %img{:src => "http://media.bclocalnews.com/images/IssySam.png"}
+      %hr
   .row.centered{:style => "margin-bottom: 25px;"}
   %hr
 %section.show-for-large-up.skyblue
   .row
-    %h2.centered
-      Flight Videos
-    %dl.tabs{:style => "margin-left: 14%;", :data => {:tab => ""}}
-      %dd.active
-        =link_to "Anton's Flight", "#video1"
-      %dd
-        =link_to "Ashlee's Flight", "#video2"
-      %dd
-        =link_to "JulieLynn's Flight", "#video3"
-      %dd
-        =link_to "Mark's Flight", "#video4"
-    .tabs-content.centered
-      #video1.content.active
-        %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
-      #video2.content
-        %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
-      #video3.content
-        %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
-      #video4.content
-        %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
+    .small-12.columns.centered
+      %h2.centered
+        Flight Videos
+      %dl.tabs{:style => "margin-left: 13%;", :data => {:tab => ""}}
+        %dd.active
+          =link_to "Anton", "#video1", style: "padding: 10px;"
+        %dd
+          =link_to "Ashlee", "#video2", style: "padding: 10px;"
+        %dd
+          =link_to "JulieLynn", "#video3", style: "padding: 10px;"
+        %dd
+          =link_to "Mark", "#video4", style: "padding: 10px;"
+        %dd
+          =link_to "Jason", "#video5", style: "padding: 10px;"
+        %dd
+          =link_to "Serei Panh", "#video6", style: "padding: 10px;"
+        %dd
+          =link_to "Larry", "#video7", style: "padding: 10px;"
+        %dd
+          =link_to "View From Above", "#video8", style: "padding: 10px;"
+      .tabs-content.centered
+        #video1.content.active
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
+        #video2.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
+        #video3.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
+        #video4.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
+        #video5.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/CJFugtJlC_s", :frameborder => "0"}
+        #video6.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/rX511v45TIU", :frameborder => "0"}
+        #video7.content
+          %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/VzrlexXcEtM", :frameborder => "0"}
+        #video8.content
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fprojectairtime%2Fvideos%2F1067313513386793%2F&show_text=0&width=560" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 %section.show-for-medium-down
   .row
-    .small-12.column
+    .small-8.column.small-centered
       %h2.centered
         Project Airtime Flight Videos
       .videoWrapper
@@ -95,10 +128,20 @@
         %iframe{:src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
       .videoWrapper
         %iframe{:src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
+      .videoWrapper
+        %iframe{:src => "https://www.youtube.com/embed/CJFugtJlC_s", :frameborder => "0"}
+      .videoWrapper
+        %iframe{:src => "https://www.youtube.com/embed/rX511v45TIU", :frameborder => "0"}
+      .videoWrapper
+        %iframe{:src => "https://www.youtube.com/embed/VzrlexXcEtM", :frameborder => "0"}
+      .videoWrapper
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fprojectairtime%2Fvideos%2F1067313513386793%2F&show_text=0&width=560" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 %section
   .row
     .small-12.column
       %h2.centered Our Sponsors & Supporters
+    .small-12.columns
+      %img{src: "http://boostfitnessmarketing.com/wp-content/uploads/Screen-Shot-2016-12-14-at-2.12.13-PM.png", style: "height: 100px; float: right;"}
       %p
         Project Airtime has many great supporters. It's nearly impossible to thank every single contributor but you know who you are. From those that "like" and share our videos, to the foundations that fund our efforts, every supporter counts. You are Project Airtime! This is your organization and we will do everything we can to make you proud of it.
   .row
@@ -125,6 +168,10 @@
         Luanne Plot Hording
       %p
         John Schnebeck
+      %p
+        Luke Seile
+      %p
+        Sandefer Family
     .small-12.large-4.columns
       %p
         The Fabric of America Fund
@@ -154,6 +201,8 @@
       %p
         The Community Foundation of Utah
       %p
+        Foundation for Free Flight
+      %p
         Curtis Williams
       %p
         Lori Fitzgerald
@@ -173,3 +222,5 @@
         Tony Lang
       %p
         Loren Cox
+      %p
+        Becomeco
