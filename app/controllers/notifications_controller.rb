@@ -23,7 +23,7 @@ class NotificationsController < ApplicationController
 
   def resend_admin_password
     AppMailer.resend_admin_password.deliver
-    flash[:success] = "Check your email (projectairtime@gmail.com) for the password."
+    flash[:success] = "Success! Check email (projectairtime@gmail.com) for password. The email might take a minute to arrive."
     redirect_to :back
   end
 
