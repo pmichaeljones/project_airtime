@@ -7,18 +7,18 @@
         =link_to "Paragraphs", "#paragraphs"
     .tabs-content
       .content.active#sponsors
-        = form_tag '/new_sponsor', method: :post, remote: true do
+        = form_tag sponsors_path, method: :post do |x|
           %fieldset
             %legend
             .small-8.column
               =text_field_tag :sponsor, nil, placeholder: "Jane Smith Corp", class: "radius"
-            .small-4.columns
+            .small-4.columns.centered
               =submit_tag "Add New Sponsor", class: "button"
             .small-12.columns
               - @sponsors.each do |x|
                 .small-12.large-3.columns
-                  %span
-                    =link_to "X", "#", class: "delete-sponsor"
+                  %span{style: "font-size: 12px;"}
+                    =link_to "X", sponsor_path(x.id), method: :delete, class: "delete-sponsor"
                     =x.name
       .content#paragraphs
         %p
