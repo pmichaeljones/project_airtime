@@ -19,15 +19,6 @@ class PagesController < ApplicationController
 
   end
 
-  def dashboard
-    if session[:active_login] != true
-      flash[:alert] = "You need to log in before accessing the Project Airtime Admin dashboard."
-      redirect_to admin_path and return
-    end
-
-    render 'dashboard/dashboard'
-  end
-
   def logout
     session[:active_login] = false
     flash[:success] = "You have successfully logged out of the Project Airtime Admin dashboard."

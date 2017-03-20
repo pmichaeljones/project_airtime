@@ -1,7 +1,28 @@
 .row
   .small-12.columns
-    %p
-      This is the admin dashboard.
+    %ul.tabs{data:{tab: true}}
+      %li.tab-title.active
+        =link_to "Sponsors", "#sponsors"
+      %li.tab-title
+        =link_to "Paragraphs", "#paragraphs"
+    .tabs-content
+      .content.active#sponsors
+        = form_tag '/new_sponsor', method: :post, remote: true do
+          %fieldset
+            %legend
+            .small-8.column
+              =text_field_tag :sponsor, nil, placeholder: "Jane Smith Corp", class: "radius"
+            .small-4.columns
+              =submit_tag "Add New Sponsor", class: "button"
+            .small-12.columns
+              - @sponsors.each do |x|
+                .small-12.large-3.columns
+                  %span
+                    =link_to "X", "#", class: "delete-sponsor"
+                    =x.name
+      .content#paragraphs
+        %p
+          More stuff here
 .row
   .small-12.columns
     =link_to "Log Out", logout_path, method: :post
