@@ -2,6 +2,13 @@ Rails.application.routes.draw do
 
   root to: 'pages#front'
 
+  get "/admin", to: "pages#admin"
+  post "/admin", to: "pages#admin_login"
+
+  get "resend_admin_password", to: 'notifications#resend_admin_password'
+
+  resources :sponsors
+
   get 'about-chris', to: 'pages#about-chris', as: 'about_chris'
   get 'faq', to: 'pages#faq'
   get 'important-information', to: 'pages#important-info'

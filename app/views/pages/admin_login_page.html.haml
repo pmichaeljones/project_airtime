@@ -1,0 +1,19 @@
+.row
+  .small-6.column.small-centered
+    = render 'shared/messages'
+    = form_tag '/admin', method: :post, data: {abide: ''} do
+      %fieldset
+        %legend
+        .small-12.column
+          = label_tag :sig, "Please enter the login password for Project Airtime.", :style => "margin-top: 5px;"
+          = password_field_tag :sign_in_password, nil, class: 'radius', required: ''
+          %small.error You must enter a password before submitting the form.
+        .small-12.column
+          =submit_tag "Sign In", class: 'button right radius'
+        .small-12.columns
+          %p{style: "font-size: 13px;"}
+            Did you forget the password? No worries!
+            =link_to "Click here", resend_admin_password_path
+            and the password will be emailed to
+            %span{style: "font-weight: 900;"}
+              projectairtime@gmail.com

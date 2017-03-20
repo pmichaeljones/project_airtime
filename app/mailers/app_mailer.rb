@@ -1,5 +1,14 @@
 class AppMailer < ActionMailer::Base
 
+  def resend_admin_password
+  @password = ENV["ADMIN_PASSWORD"]
+  mail(
+    from: "projectairtime@gmail.com",
+    to: "projectairtime@gmail.com",
+    subject: "Project Airtime Website Admin Password"
+    )
+  end    
+
   def copilot(params)
     @name = params[:sender_name]
     @phone = params[:phone]

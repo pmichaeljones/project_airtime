@@ -21,6 +21,12 @@ class NotificationsController < ApplicationController
     redirect_to sponsorship_path
   end
 
+  def resend_admin_password
+    AppMailer.resend_admin_password.deliver
+    flash[:success] = "Check your email (projectairtime@gmail.com) for the password."
+    redirect_to :back
+  end
+
   def general
     binding.pry
   end
