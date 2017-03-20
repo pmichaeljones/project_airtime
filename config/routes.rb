@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get "/admin", to: "pages#admin"
   post "/admin", to: "pages#admin_login"
 
+  get "/admin/dashboard", to: "pages#dashboard", as: "dashboard"
+
   get "resend_admin_password", to: 'notifications#resend_admin_password'
+
+  post "/logout", to: "pages#logout"
 
   resources :sponsors
 
