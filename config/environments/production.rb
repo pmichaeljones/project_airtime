@@ -19,10 +19,11 @@ Rails.application.configure do
   :address        => 'smtp.sendgrid.net',
   :user_name      => 'apikey',
   :password       => ENV['SG_PASSWORD'],
-  # :domain         => ENV['MAILGUN_DOMAIN'],
   :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+  :enable_starttls_auto => true
+  }
+  
+  ActionMailer::Base.delivery_method = :smtp
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
