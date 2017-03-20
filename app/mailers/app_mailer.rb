@@ -3,7 +3,7 @@ class AppMailer < ActionMailer::Base
   def resend_admin_password
   @password = ENV["ADMIN_PASSWORD"]
   mail(
-    from: "projectairtime@gmail.com",
+    from: "Project Airtime <projectairtime@gmail.com>",
     to: "pmichaeljones@gmail.com",
     subject: "Project Airtime Website Admin Password"
     )
