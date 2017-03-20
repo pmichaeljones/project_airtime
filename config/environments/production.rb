@@ -15,10 +15,10 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'],
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :port           => 587,
+  :address        => 'smtp.sendgrid.net',
+  :user_name      => 'apikey',
+  :password       => ENV['SG_PASSWORD'],
   # :domain         => ENV['MAILGUN_DOMAIN'],
   :authentication => :plain,
 }
