@@ -24,6 +24,16 @@
   text-align: center;
 }
 
+.logout-button {
+  background: black;
+  padding: 3px; 
+  color: white;
+}
+
+.logout-button:hover {
+  background: black;
+} 
+
 .delete-sponsor{
   color: white;
   background: red;
