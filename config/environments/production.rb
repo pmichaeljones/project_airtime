@@ -15,16 +15,14 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['GMAIL_SMTP_USER'],
-  :password => ENV['GMAIL_SMTP_PASSWORD'],
-  :domain => "projectairtime.org",
-  :address => "smtp.gmail.com",
-  :port => 587,
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'project-airtime.heroku.com',
   :authentication => :plain,
-  :enable_starttls_auto => true
-  }
-
-  ActionMailer::Base.delivery_method = :smtp
+}
+ActionMailer::Base.delivery_method = :smtp
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
