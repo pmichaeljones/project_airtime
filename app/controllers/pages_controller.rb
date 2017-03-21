@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def front
     @sponsors = Sponsor.all
+    @videos = Video.all
   end
 
   def admin

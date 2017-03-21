@@ -4,6 +4,8 @@
       %li.tab-title.active
         =link_to "Sponsors", "#sponsors"
       %li.tab-title
+        =link_to "Videos", "#videos"
+      %li.tab-title
         =link_to "Paragraphs", "#paragraphs"
     .tabs-content
       .content.active#sponsors
@@ -11,7 +13,8 @@
           %fieldset
             %legend
             .small-8.column
-              =text_field_tag :sponsor, nil, placeholder: "Jane Smith Corp", class: "radius"
+              = label_tag :sponsor_name, "Sponsor's Name"
+              = text_field_tag :sponsor, nil, placeholder: "Jane Smith Corp", class: "radius"
             .small-4.columns.centered
               =submit_tag "Add New Sponsor", class: "button"
             .small-12.columns
@@ -20,9 +23,24 @@
                   %span{style: "font-size: 12px;"}
                     =link_to "X", sponsor_path(x.id), method: :delete, class: "delete-sponsor"
                     =x.name
-      .content#paragraphs
-        %p
-          More stuff here
+      .content#videos
+        = form_tag sponsors_path, method: :post do |x|
+          %fieldset
+            %legend
+            .small-4.column
+              = label_tag :title, "Title"
+              = text_field_tag :title, nil, placeholder: "Sarah's Flight", class: "radius"
+            .small-4.columns
+              = label_tag :url, "Video URL (preferably YouTube)"
+              =text_field_tag :url, nil, placeholder: "http://youtube.com/videoXYZ", class: "radius"
+            .small-4.columns.centered
+              =submit_tag "Add New Video", class: "button"
+            .small-12.columns
+              - @sponsors.each do |x|
+                .small-12.large-3.columns
+                  %span{style: "font-size: 12px;"}
+                    =link_to "X", sponsor_path(x.id), method: :delete, class: "delete-sponsor"
+                    =x.name
 .row
   .small-12.columns
     =link_to "Log Out of Dashboard", logout_path, method: :post, class: "button logout-button"

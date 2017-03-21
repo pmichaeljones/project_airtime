@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/logout", to: "pages#logout"
 
   resources :sponsors
+  resources :videos
 
   get 'about-chris', to: 'pages#about-chris', as: 'about_chris'
   get 'faq', to: 'pages#faq'

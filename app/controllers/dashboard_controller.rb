@@ -7,8 +7,9 @@ class DashboardController < ApplicationController
     end
 
     @sponsors = Sponsor.all
-    
-    
+    @videos = Video.all
+
+
     render 'dashboard/dashboard'
   end
 
