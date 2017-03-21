@@ -4,7 +4,7 @@ class AppMailer < ActionMailer::Base
   @password = ENV["ADMIN_PASSWORD"]
   mail(
     from: "Project Airtime <projectairtime@gmail.com>",
-    to: "pmichaeljones@gmail.com",
+    to: "projectairtime@gmail.com",
     subject: "Project Airtime Website Admin Password"
     )
   end    
