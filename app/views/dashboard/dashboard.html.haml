@@ -4,14 +4,14 @@
       %li.tab-title.active
         =link_to "Sponsors", "#sponsors"
       %li.tab-title
-        =link_to "Videos", "#videos"
+        =link_to "Homepage Videos", "#videos"
       %li.tab-title
         =link_to "Paragraphs", "#paragraphs"
     .tabs-content
       .content.active#sponsors
         = form_tag sponsors_path, method: :post do |x|
           %fieldset
-            %legend
+            %legend Add Sponsor Form
             .small-8.column
               = label_tag :sponsor_name, "Sponsor's Name"
               = text_field_tag :sponsor, nil, placeholder: "Jane Smith Corp", class: "radius"
@@ -24,23 +24,32 @@
                     =link_to "X", sponsor_path(x.id), method: :delete, class: "delete-sponsor"
                     =x.name
       .content#videos
-        = form_tag sponsors_path, method: :post do |x|
+        = form_tag videos_path, method: :post do |x|
           %fieldset
-            %legend
+            %legend Video Upload Form
             .small-4.column
               = label_tag :title, "Title"
               = text_field_tag :title, nil, placeholder: "Sarah's Flight", class: "radius"
             .small-4.columns
-              = label_tag :url, "Video URL (preferably YouTube)"
-              =text_field_tag :url, nil, placeholder: "http://youtube.com/videoXYZ", class: "radius"
+              = label_tag :url, "Video SRC (No quotation marks)"
+              =text_field_tag :url, nil, placeholder: "http://youtube.com/embed/videoXYZ", class: "radius"
             .small-4.columns.centered
               =submit_tag "Add New Video", class: "button"
             .small-12.columns
-              - @sponsors.each do |x|
+              %p
+                Give the video any title that you want. For the URL field, copy and paste the SRC (video source) from either YouTube or Facebook. Copy everything between the quotation marks: SRC="all-this-stuff"
+            %hr
+            .small-12.columns
+              %img{src: "https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/17389143_10109376811456610_5666346499807902912_o.jpg?oh=d66c1d5f4055fed947aa6058690806d7&oe=595A0004", height: "300"}
+            %hr
+            .small-12.columns
+              %h3.centered
+                Current Homepage Videos
+              - @videos.each do |x|
                 .small-12.large-3.columns
                   %span{style: "font-size: 12px;"}
-                    =link_to "X", sponsor_path(x.id), method: :delete, class: "delete-sponsor"
-                    =x.name
+                    =link_to "X", video_path(x.id), method: :delete, class: "delete-sponsor"
+                    =x.title
 .row
   .small-12.columns
     =link_to "Log Out of Dashboard", logout_path, method: :post, class: "button logout-button"

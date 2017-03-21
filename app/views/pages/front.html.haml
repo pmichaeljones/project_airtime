@@ -81,36 +81,16 @@
     .small-12.columns.centered
       %h2.centered
         Project Airtime Flight Videos
-      %dl.tabs{:style => "margin-left: 13%;", :data => {:tab => ""}}
+      %dl.tabs{:style => "margin-left: 5%;", :data => {:tab => ""}}
         - @videos.all.each do |x|
-          %dd
+          %dd{style: "margin-top: 5px;"}
             = link_to "#{x.title}", "#video_#{x.id}", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Anton", "#video1", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Ashlee", "#video2", style: "padding: 10px;"
-        / %dd
-        /   =link_to "JulieLynn", "#video3", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Mark", "#video4", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Jason", "#video5", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Serei Panh", "#video6", style: "padding: 10px;"
-        / %dd
-        /   =link_to "Larry", "#video7", style: "padding: 10px;"
         / %dd
         /   =link_to "View From Above", "#video8", style: "padding: 10px;"
       .tabs-content.centered
         - @videos.all.each do |x|
           .content{id: "video_#{x.id}"}
             %iframe{:width => "700", :height => "400", :src => "#{x.url}", :frameborder => "0"}
-        / #video1.content
-        /   %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
-        / #video2.content
-        /   %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
-        / #video3.content
-        /   %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
         / #video4.content
         /   %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
         / #video5.content
@@ -121,27 +101,14 @@
         /   %iframe{:width => "700", :height => "400", :src => "https://www.youtube.com/embed/VzrlexXcEtM", :frameborder => "0"}
         / #video8.content
         /   <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fprojectairtime%2Fvideos%2F1067313513386793%2F&show_text=0&width=560" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-/ %section.show-for-medium-down
-/   .row
-/     .small-8.column.small-centered
-/       %h2.centered
-/         Project Airtime Flight Videos
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/rq7_dU64_7w", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/ihTW1Cqbr1w", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/8H75hB834CI", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/Jf2_qzNZjmM", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/CJFugtJlC_s", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/rX511v45TIU", :frameborder => "0"}
-/       .videoWrapper
-/         %iframe{:src => "https://www.youtube.com/embed/VzrlexXcEtM", :frameborder => "0"}
-/       .videoWrapper
-/         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fprojectairtime%2Fvideos%2F1067313513386793%2F&show_text=0&width=560" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+%section.show-for-medium-down
+  .row
+    .small-8.column.small-centered
+      %h3.centered
+        Project Airtime Flight Videos
+      - @videos.all.each do |x|
+        .videoWrapper
+          %iframe{:src => "#{x.url}", :frameborder => "0"}
 %section
   .row
     .small-12.column
