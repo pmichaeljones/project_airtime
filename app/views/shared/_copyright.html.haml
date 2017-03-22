@@ -6,8 +6,8 @@
         =link_to "Patrick Jones", "http://patrickjones.me", target: "_blank", class: "orange"
         from
         =link_to "DoggieDashboard.com", "http://doggiedashboard.com", target: "_blank", class: "orange"
-      %span
-        - if session[:active_login] == true
-          =link_to "| Admin Dashboard", dashboard_path, style: "color: white;"
-        - else
-          =link_to "| Admin Login", admin_path, style: "color: white;"
+      / %span
+      /   - if session[:active_login] == true
+      /     =link_to "| Admin Dashboard", dashboard_path, style: "color: white;"
+      /   - else
+      /     =link_to "| Admin Login", admin_path, style: "color: white;"
