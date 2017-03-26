@@ -1,0 +1,29 @@
+.content#videos
+  = form_tag videos_path, method: :post do |x|
+    %fieldset
+      %legend Video Upload Form
+      .small-3.column
+        = label_tag :title, "Title"
+        = text_field_tag :title, nil, placeholder: "Sarah's Flight", class: "radius"
+      .small-6.columns
+        = label_tag :url, "Video SRC (No quotation marks)"
+        = text_field_tag :url, nil, placeholder: "http://youtube.com/embed/videoXYZ", class: "radius"
+      .small-3.columns.centered
+        =submit_tag "Add New Video", class: "button"
+      .small-12.columns
+        %p
+          Give the video any title that you want. For the URL field, copy and paste the SRC (video source) from either YouTube or Facebook. Copy everything between the quotation marks: SRC="all-this-stuff"
+      %hr
+      .small-12.columns
+        %h3.centered
+          How to Copy the SRC Code for Each Type of Video
+        %img{src: "https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/17389090_10109376945942100_1766521279028281219_o.jpg?oh=ef184dd08131b922b9e413ee03855b52&oe=59664CF8"}
+      %hr
+      .small-12.columns
+        %h3.centered
+          Current Homepage Videos
+        - @videos.each do |x|
+          .small-12.large-3.columns
+            %span{style: "font-size: 12px;"}
+              =link_to "X", video_path(x.id), method: :delete, class: "delete-sponsor"
+              =x.title
