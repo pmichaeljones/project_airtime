@@ -8,6 +8,7 @@ class DashboardController < ApplicationController
 
     @sponsors = Sponsor.all
     @videos = Video.all
+    @paragraphs = Paragraph.all
 
 
     render 'dashboard/dashboard'
