@@ -18,7 +18,7 @@ class AppMailer < ActionMailer::Base
     mail(
       from: "projectairtime@gmail.com",
       reply_to: "#{@name} <#{@email}>",
-      to: "projectairtime@gmail.com",
+      to: "projectairtime@gmail.com, pmichaeljones@gmail.com",
       subject: "Project Airtime Co-Pilot Inquiry"
       )
   end
