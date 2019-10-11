@@ -1,15 +1,5 @@
 class AppMailer < ActionMailer::Base
 
-  # def resend_admin_password
-  # @password = ENV["ADMIN_PASSWORD"]
-  # mail(
-  #   from: "Project Airtime <projectairtime@gmail.com>",
-  #   bcc: "pmichaeljones@gmail.com",
-  #   to: "projectairtime@gmail.com",
-  #   subject: "Project Airtime Website Admin Password"
-  #   )
-  # end    
-
   def copilot(params)
     @name = params[:sender_name]
     @phone = params[:phone]
@@ -31,8 +21,8 @@ class AppMailer < ActionMailer::Base
     mail(
       from: "projectairtime@gmail.com",
       reply_to: "#{@sender} <#{@email}>",
-      to: "projectairtime@gmail.com",
-      subject: "#{@subject}"
+      to: "projectairtime@gmail.com, pmichaeljones@gmail.com",
+      subject: "Project Airtime Volunteer Request: #{@subject}"
       )
   end
 
@@ -44,8 +34,8 @@ class AppMailer < ActionMailer::Base
     mail(
       from: "projectairtime@gmail.com",
       reply_to: "#{@sender} <#{@email}>",
-      to: "projectairtime@gmail.com",
-      subject: "#{@subject}"
+      to: "projectairtime@gmail.com, pmichaeljones@gmail.com",
+      subject: "Project Airtime Sponsorship Request: #{@subject}"
       )
   end
 

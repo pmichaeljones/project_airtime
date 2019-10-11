@@ -33,5 +33,12 @@
           = text_area_tag :message, nil, class: 'radius', rows: 3, required: ''
           = hidden_field_tag :hidden_field, "volunteer-form-23498hflkj9f8f2n3info8j3"
           %small.error Please Include Message Content
+        .small-8.columns
+          = hidden_field_tag :magic_number, 4, id: 'magic_number'
+          = label_tag 'number_fun', "Bots are smart. What does 2+2 equal?", style: "margin-top: 7px;"
+        .small-4.columns
+          = text_field_tag 'number_fun', nil, class: 'radius', data: {equalto:"magic_number"}, required: '', placeholder: "Answer"
+          %small.error
+            Here's a hint: 4
         .small-12.large-12.column
           =submit_tag "Send Volunteer Form", class: 'button right radius'

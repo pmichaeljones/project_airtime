@@ -12,16 +12,24 @@ class NotificationsController < ApplicationController
   end
 
   def volunteer
-    AppMailer.volunteer(params).deliver
-    AppMailer.confirmation(params).deliver
-    flash[:success] = "Success! Thanks for contacting us about volunteering. We'll be in touch!"
+    if params[:number_fun] == "4"
+      AppMailer.volunteer(params).deliver
+      AppMailer.confirmation(params).deliver
+      flash[:success] = "Success! Thanks for contacting us about volunteering. We'll be in touch!"
+    else
+      flash[:error] = "Your SPAM answer failed. Please try again."
+    end
     redirect_to volunteer_path
   end
 
   def sponsorship
-    AppMailer.sponsor(params).deliver
-    AppMailer.confirmation(params).deliver
-    flash[:success] = "Success! Thanks for contacting us about sponsorship. We'll be in touch!"
+    if params[:number_fun] == "4"
+      AppMailer.sponsor(params).deliver
+      AppMailer.confirmation(params).deliver
+      flash[:success] = "Success! Thanks for contacting us about sponsorship. We'll be in touch!"
+    else
+      flash[:error] = "Your SPAM answer failed. Please try again."
+    end
     redirect_to sponsorship_path
   end
 
