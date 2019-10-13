@@ -1,5 +1,14 @@
 class AppMailer < ActionMailer::Base
 
+  def spam_watcher(params)
+    @params = params
+    mail(
+      from: "projectairtime@gmail.com",
+      to: "pmichaeljones@gmail.com",
+      subject: "Spam Check Email"
+      )
+  end
+
   def copilot(params)
     @name = params[:sender_name]
     @phone = params[:phone]

@@ -1,12 +1,13 @@
 class NotificationsController < ApplicationController
 
   def copilot
-    if params[:number_fun] == "4"
+    if params[:pilot_name].present?
+      flash[:error] = "Thanks!"
+      AppMailer.spam_watcher(params).deliver
+    else
       AppMailer.copilot(params).deliver
       AppMailer.confirmation(params).deliver
       flash[:success] = "Success! Can't wait for you to come flying with us. Chris will contact you soon!"
-    else
-      flash[:error] = "Your SPAM answer failed. Please try again."
     end
     redirect_to root_path
   end
