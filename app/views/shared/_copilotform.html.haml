@@ -3,6 +3,7 @@
     %fieldset
       %legend Come Fly with Project Airtime!
       .small-12.column
+        = text_field_tag :pilot_name, nil, style: "background: transparent; box-shadow: none; border: none; margin: -10px 0px 5px 0px; height: 10px;"
         = label_tag :sender_name, "Name", :style => "margin-top: 5px;"
         = text_field_tag :sender_name, nil, placeholder: 'Jill Smith', class: 'radius', required: ''
         %small.error Please Include Your Name
@@ -16,10 +17,8 @@
         %small.error Must Be Valid Email
       .small-12.column
         = label_tag :message, "Tell Us About Yourself"
-        = text_area_tag :message, nil, placeholder: "Why do you want to come fly with us?", class: 'radius', rows: 3, required: '', style: "margin-bottom: -20px;"
+        = text_area_tag :message, nil, placeholder: "Why do you want to come fly with us?", class: 'radius', rows: 3, required: ''
         %small.error Please Include Message Content
-      .small-12.columns
-        = text_field_tag :pilot_name, nil, style: "background: transparent; box-shadow: none; border: none; heigh: 10px;"
       .small-12.large-12.column
         = render 'shared/messages'
         =submit_tag "Let's Go Flying!", class: 'button right radius'
