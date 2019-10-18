@@ -1,9 +1,9 @@
 = form_tag '/copilot_form', :class => "copilot-form", method: :post, data: {abide: ''} do
-  .row
+  .row{style: "position: relative;"}
     %fieldset
       %legend Come Fly with Project Airtime!
       .small-12.column
-        = text_field_tag :pilot_name, nil, style: "background: transparent; box-shadow: none; border: none; margin: -10px 0px 5px 0px; height: 10px;"
+        = text_field_tag :pilot_name, nil, style: "background: transparent; border: none; margin: -10px 0px 5px 0px; position: absolute; top: -200px; left: 0;"
         = label_tag :sender_name, "Name", :style => "margin-top: 5px;"
         = text_field_tag :sender_name, nil, placeholder: 'Jill Smith', class: 'radius', required: ''
         %small.error Please Include Your Name
