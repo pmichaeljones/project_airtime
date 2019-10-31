@@ -28,4 +28,6 @@ Rails.application.routes.draw do
 
   post 'copilot_form', to: 'notifications#copilot'
 
+  match "*path", to: redirect('/'), via: :all
+
 end
