@@ -2,8 +2,8 @@ class NotificationsController < ApplicationController
 
   def copilot
     if params[:pilot_name].present?
-      flash[:error] = "Thanks!"
-      AppMailer.spam_watcher(params).deliver
+      flash[:error] = "There was an error. Please email Chris directly: projectairtime@gmail.com"
+      # AppMailer.spam_watcher(params).deliver
     else
       AppMailer.copilot(params).deliver
       AppMailer.confirmation(params).deliver
