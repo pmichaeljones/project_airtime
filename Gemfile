@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'coffee-rails'
-gem 'rails'
+ruby '2.5.7'
+
+gem 'rails', "4.2.11.1"
 gem 'pg'
-gem 'haml-rails'
+gem 'haml-rails', "1.0.0"
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
@@ -26,7 +27,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '3.9.0'
   gem 'pry', '0.9.10'
   gem 'pry-nav'
   gem 'letter_opener'
