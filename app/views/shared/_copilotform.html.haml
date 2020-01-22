@@ -19,6 +19,13 @@
         = label_tag :message, "Tell Us About Yourself"
         = text_area_tag :message, nil, placeholder: "Why do you want to come fly with us?", class: 'radius', rows: 3, required: ''
         %small.error Please Include Message Content
+      .small-8.columns
+        = hidden_field_tag :magic_number, 4, id: 'magic_number'
+        = label_tag 'number_fun', "Bots are smart. What's 2+2?", style: "margin-top: 7px;"
+      .small-4.columns
+        = text_field_tag 'number_fun', nil, class: 'radius', data: {equalto:"magic_number"}, required: '', placeholder: "Answer"
+        %small.error
+          Here's a hint: 4
       .small-12.large-12.column
         = render 'shared/messages'
         =submit_tag "Let's Go Flying!", class: 'button right radius'
