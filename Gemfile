@@ -15,7 +15,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'high_voltage', '~> 2.2.1'
 gem 'recipient_interceptor'
-gem 'rake', '10.4.2'
+gem 'rake', '12.3.3'
 gem 'jquery-ui-rails'
 
 
